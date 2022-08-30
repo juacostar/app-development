@@ -6,4 +6,11 @@
     <string name="result_tie">It\'s a tie.</string>
     <string name="result_human_wins">You won!</string>
     <string name="result_computer_wins">Android won!</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_choose">select difficulty</string>
+    <string name="difficulty_harder">normal</string>
+    <string name="difficulty_expert">expert</string>
+    <string name="quit_question">exit?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
 </resources>
