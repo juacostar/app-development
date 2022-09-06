@@ -13,10 +13,10 @@ public class TicTacToeGame {
 
 
 
-    private char mBoard[] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-    public final int BOARD_SIZE = 9;
+    private char mBoard[] = {'1','2','3','4','5','6','7','8','9'};
+    public static final int BOARD_SIZE = 9;
 
-    public static final char HUMAN_PLAYER = 'X';
+    public static final  char HUMAN_PLAYER = 'X';
     public static final char COMPUTER_PLAYER = 'O';
     public static final char OPEN_SPOT = ' ';
 
@@ -33,14 +33,17 @@ public class TicTacToeGame {
     }
 
     public void clearBoard(){
-        mBoard = new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-
+        for(int i=0;i<9;i++){
+            mBoard[i] = OPEN_SPOT;
+        }
     }
 
-    public void setMove(char player, int location){
+    public boolean setMove(char player, int location){
         if(mBoard[location] == OPEN_SPOT){
             mBoard[location] = player;
+            return true;
         }
+        return false;
     }
 
     public int getComputerMove() {
@@ -53,8 +56,8 @@ public class TicTacToeGame {
                 move = getRandomMove();
         }
         else if (mDifficultyLevel == DifficultyLevel.Expert) {
-// Try to win, but if that's not possible, block.
-// If that's not possible, move anywhere.
+            // Try to win, but if that's not possible, block.
+            // If that's not possible, move anywhere.
             move = getWinningMove();
             if (move == -1)
                 move = getBlockingMove();
@@ -209,7 +212,14 @@ public class TicTacToeGame {
     public DifficultyLevel getDifficultyLevel() {
         return mDifficultyLevel;
     }
+
     public void setDifficultyLevel(DifficultyLevel difficultyLevel) {
         mDifficultyLevel = difficultyLevel;
     }
+
+    public char getBoardOccupant(int pos){
+        return mBoard[pos];
+    }
+
+
 }

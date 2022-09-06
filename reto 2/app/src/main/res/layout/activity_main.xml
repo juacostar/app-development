@@ -4,7 +4,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_horizontal" >
-    <TableLayout
+    <com.example.androidtictactoe.BoardView
+        android:id="@+id/board"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="5dp"/>
+    <!--<TableLayout
         android:id="@+id/play_grid" android:layout_width="fill_parent"
         android:layout_height="wrap_content" android:layout_marginTop="5dp" >
         <TableRow android:gravity="center_horizontal">
@@ -40,7 +45,7 @@
                 android:layout_height="100dp" android:text="9"
                 android:textSize="70dp" />
         </TableRow>
-    </TableLayout>
+    </TableLayout>-->
     <TextView android:id="@+id/information" android:layout_width="fill_parent"
         android:layout_height="wrap_content" android:text="info"
         android:gravity="center_horizontal" android:layout_marginTop="20dp"
