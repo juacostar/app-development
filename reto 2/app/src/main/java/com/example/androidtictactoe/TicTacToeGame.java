@@ -38,6 +38,15 @@ public class TicTacToeGame {
         }
     }
 
+    public char[] getBoardState() {
+        return mBoard;
+    }
+
+    public void setBoardState(char[] boards) {
+        mBoard = boards;
+    }
+
+
     public boolean setMove(char player, int location){
         if(mBoard[location] == OPEN_SPOT){
             mBoard[location] = player;
