@@ -26,10 +26,6 @@ public class TicTacToeGame {
 
         // Seed the random number generator
         mRand = new Random();
-
-        char turn = HUMAN_PLAYER;    // Human starts first
-        int win = 0;                // Set to 1, 2, or 3 when game is over
-
     }
 
     public void clearBoard(){
@@ -82,7 +78,7 @@ public class TicTacToeGame {
             if (mBoard[i] != HUMAN_PLAYER && mBoard[i] != COMPUTER_PLAYER) {
                 char curr = mBoard[i];   // Save the current number
                 mBoard[i] = HUMAN_PLAYER;
-                if (checkForWinner() == 2) {
+                if (checkForWinner() == 3) {
                     mBoard[i] = COMPUTER_PLAYER;
                     setMove(COMPUTER_PLAYER,i);
                     return i;
@@ -100,7 +96,7 @@ public class TicTacToeGame {
             if (mBoard[i] != HUMAN_PLAYER && mBoard[i] != COMPUTER_PLAYER) {
                 char curr = mBoard[i];
                 mBoard[i] = COMPUTER_PLAYER;
-                if (checkForWinner() == 3) {
+                if (checkForWinner() == 2) {
                     setMove(COMPUTER_PLAYER,i);
                     return i;
                 }
