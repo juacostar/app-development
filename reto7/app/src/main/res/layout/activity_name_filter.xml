@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NameFilter">
+
+    <EditText
+        android:id="@+id/nameFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/nameFilterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="searchCompanyByName"
+        android:text="Buscar"
+        app:layout_constraintTop_toBottomOf="@id/nameFilter"
+        />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintTop_toBottomOf="@id/nameFilterButton"
+        android:layout_alignParentEnd="true"
+        tools:ignore="MissingConstraints">
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/companyUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/companyName"
+        android:hint="Url de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/companyPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/companyUrl"
+        android:hint="Teléfono de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/companyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/companyPhone"
+        android:hint="Email de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/companyProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/companyEmail"
+        android:hint="Productos de la empresa"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/companyCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Categoria de la empresa"
+        app:layout_constraintTop_toBottomOf="@id/companyProducts"
+        />
+
+   <!-- <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/companyCategory"
+        android:visibility="gone"
+        />
+-->
+
+    <Button
+        android:id="@+id/createCompanyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        android:onClick="createCompany"
+        app:layout_constraintTop_toBottomOf="@id/companyCategory"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/createCompanyButton"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:layout_marginLeft="40dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="UpdateCompany"
+            android:text="Actualizar"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:onClick="deleteCompany"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/creteCompanyButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_company"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="passToCreateCompany"/>
+
+    <Button
+        android:id="@+id/companyListButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Lista de empresas"
+        android:onClick="passToListCompany"
+        app:layout_constraintTop_toBottomOf="@id/creteCompanyButton"
+        />
+
+    <Button
+        android:id="@+id/nameFilterButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Filtro por nombre"
+        android:onClick="passToFilterByNameCompany"
+        app:layout_constraintTop_toBottomOf="@id/companyListButton"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Filtro por categoria"
+        android:onClick="passToFilterByCategory"
+        app:layout_constraintTop_toBottomOf="@id/nameFilterButton"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
